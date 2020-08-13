@@ -27,7 +27,6 @@
     "express-handlebars": "^5.1.0"
   },
   "devDependencies": {
-    "heroku": "^7.42.6",
     "mocha": "^8.1.1"
   }
 }
