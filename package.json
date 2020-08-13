@@ -1,0 +1,33 @@
+{
+  "name": "settings-bill-expressjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MecayleG/settings-bill-expressjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MecayleG/settings-bill-expressjs/issues"
+  },
+  "homepage": "https://github.com/MecayleG/settings-bill-expressjs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0"
+  },
+  "devDependencies": {
+    "heroku": "^7.42.6",
+    "mocha": "^8.1.1"
+  }
+}
