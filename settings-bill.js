@@ -1,3 +1,6 @@
+const moment = require("moment");
+
+
 module.exports = function SettingsBill() {
 
     let smsCost;
@@ -37,7 +40,7 @@ module.exports = function SettingsBill() {
             actionList.push({
                 type: action,
                 cost,
-                timestamp: new Date()
+                timestamp: moment(new Date()).fromNow()
             });
         }
     }
