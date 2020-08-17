@@ -33,12 +33,13 @@ module.exports = function SettingsBill() {
         else if (action === 'call'){
             cost = callCost;
         }
-
-        actionList.push({
-            type: action,
-            cost,
-            timestamp: new Date()
-        });
+        if(!hasReachedCriticalLevel()){
+            actionList.push({
+                type: action,
+                cost,
+                timestamp: new Date()
+            });
+        }
     }
 
     function actions(){
@@ -65,13 +66,15 @@ module.exports = function SettingsBill() {
 
     function getTotal(type) {
         let total = 0;
-        // loop through all the entries in the action list 
+        // loop through all the entries in the action list
+        // console.log('Crictical ',criticalLevel)
         for (let index = 0; index < actionList.length; index++) {
             const action = actionList[index];
             // check this is the type we are doing the total for 
             if (action.type === type) {
                 // if it is add the total to the list
-                total += action.cost;
+                    total += action.cost;
+                
             }
         }
         return total;
